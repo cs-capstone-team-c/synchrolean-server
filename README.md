@@ -50,7 +50,7 @@ These instructions are specific to deploying on Google Cloud Platform using a Da
 - Add the appropraite connection string to appsettings.json. [Example PostgreSQL Connection Strings](https://www.connectionstrings.com/postgresql/)
 - Change dbcontext setup in startup.cs to use npgsql and the new connection string. Save and close startup.cs before next step.
 - Delete all existing migrations from the Migrations folder.
-- Run ``dotnet add migrations ReleaseCandidate<Number>`` (replacing <Number> with One, Two, Three, etc.)
+- Run ``dotnet ef migrations add ReleaseCandidate<Number>`` (replacing <Number> with One, Two, Three, etc.)
 - Run ``dotnet ef database drop``. Confirm the database drop if asked.
 - Run ``dotnet ef database update``
 - Right click project -> Publish to Google Cloud.. -> App Engine Flex -> Select the GCP project -> install services -> publish.
